@@ -1,8 +1,142 @@
 @import 'tailwindcss';
 
 ::selection {
-  background-color: #47a3f3;
-  color: #fefefe;
+  background-color: #f47321;
+  color: #1c1917;
+}
+
+/* University of Miami colors: orange is primary, green fills the bento boxes (see context/style.md) */
+:root {
+  --orange: #f47321;
+  --orange-text: #b4500c;
+  --orange-dark: #d95f12;
+  --green: #005030;
+  --green-dark: #003d24;
+  --on-green: #ffffff;
+  --on-green-muted: #d3e5dc;
+  --ink: #1c1917;
+  --muted: #57534e;
+  --line: #e7e5e4;
+}
+
+body {
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  color: var(--ink);
+  background: #ffffff;
+}
+
+.text-green {
+  color: var(--green);
+}
+
+.text-orange {
+  color: var(--orange-text);
+}
+
+.text-muted {
+  color: var(--muted);
+}
+
+/* Bento tiles: green fill, white text, orange label pill */
+.bento {
+  background: var(--green);
+  color: var(--on-green);
+  border-radius: 20px;
+  padding: 1.5rem;
+  overflow: hidden;
+}
+
+.bento p,
+.bento li {
+  color: var(--on-green-muted);
+}
+
+.bento h1,
+.bento h2,
+.bento h3,
+.bento strong {
+  color: var(--on-green);
+}
+
+.bento a:not(.btn) {
+  color: var(--on-green);
+  text-decoration: underline;
+  text-decoration-color: var(--orange);
+  text-underline-offset: 3px;
+}
+
+/* Large orange figures in the "By the numbers" tiles */
+.bento .stat-value {
+  color: var(--orange);
+}
+
+.bento-label {
+  display: inline-block;
+  background: var(--orange);
+  color: var(--ink);
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: 999px;
+  padding: 0.3rem 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.chip {
+  display: inline-block;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 999px;
+  padding: 0.25rem 0.7rem;
+  font-size: 0.85rem;
+  color: var(--on-green);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 999px;
+  padding: 0.65rem 1.25rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: background-color 150ms, color 150ms, border-color 150ms;
+}
+
+.btn-primary {
+  background: var(--orange);
+  color: var(--ink);
+  border: 1.5px solid var(--orange);
+}
+
+.btn-primary:hover {
+  background: var(--orange-dark);
+  border-color: var(--orange-dark);
+}
+
+/* Outline button for use on green tiles */
+.btn-outline {
+  color: var(--on-green);
+  border: 1.5px solid rgba(255, 255, 255, 0.7);
+}
+
+.btn-outline:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.eyebrow {
+  color: var(--orange);
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.link {
+  color: var(--green);
+  text-decoration: underline;
+  text-decoration-color: var(--orange);
+  text-underline-offset: 3px;
 }
 
 :root {
@@ -24,13 +158,18 @@
     --sh-keyword: #f47067;
     --sh-string: #0fa295;
   }
-  html {
-    color-scheme: dark;
-  }
 }
 
+/* The site uses the poster's light look in every color mode */
 html {
   min-width: 360px;
+  color-scheme: light;
+  scroll-behavior: smooth;
+}
+
+/* Keep jump-link targets clear of the sticky top bar */
+section[id] {
+  scroll-margin-top: 5.5rem;
 }
 
 .prose .anchor {

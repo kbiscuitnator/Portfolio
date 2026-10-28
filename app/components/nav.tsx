@@ -1,40 +1,38 @@
-import Link from 'next/link'
+import { site } from 'app/site'
 
-const navItems = {
-  '/': {
-    name: 'home',
-  },
-  '/blog': {
-    name: 'blog',
-  },
-  'https://vercel.com/templates/next.js/portfolio-starter-kit': {
-    name: 'deploy',
-  },
-}
+const navItems = [
+  { href: '#about', name: 'About' },
+  { href: '#research', name: 'Research' },
+  { href: '#experience', name: 'Experience' },
+]
+
+const linkClass = 'text-muted transition-colors hover:text-[var(--orange-text)]'
 
 export function Navbar() {
   return (
-    <aside className="-ml-[8px] mb-16 tracking-tight">
-      <div className="lg:sticky lg:top-20">
-        <nav
-          className="flex flex-row items-start relative px-0 pb-0 fade md:overflow-auto scroll-pr-6 md:relative"
-          id="nav"
+    <header className="sticky top-0 z-20 -mx-4 mb-6 bg-white/90 px-4 py-4 backdrop-blur sm:-mx-6 sm:px-6">
+      <div className="flex flex-wrap items-center justify-between gap-3">
+        <a
+          href="#about"
+          className="flex items-center gap-2 text-lg font-bold tracking-tight text-green"
         >
-          <div className="flex flex-row space-x-0 pr-10">
-            {Object.entries(navItems).map(([path, { name }]) => {
-              return (
-                <Link
-                  key={path}
-                  href={path}
-                  className="transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle relative py-1 px-2 m-1"
-                >
-                  {name}
-                </Link>
-              )
-            })}
-          </div>
+          <span
+            aria-hidden="true"
+            className="inline-block h-3 w-3 rounded-full bg-[var(--orange)]"
+          />
+          {site.name}
+        </a>
+        <nav className="flex flex-row flex-wrap items-center gap-x-5 gap-y-2 text-sm font-medium">
+          {navItems.map(({ href, name }) => (
+            <a key={href} href={href} className={`hidden sm:inline ${linkClass}`}>
+              {name}
+            </a>
+          ))}
+          <a href="#contact" className="btn btn-primary !px-4 !py-2">
+            Contact
+          </a>
         </nav>
       </div>
-    </aside>
+    </header>
   )
 }

@@ -1,3 +1,5 @@
+import { site } from 'app/site'
+
 function ArrowIcon() {
   return (
     <svg
@@ -15,46 +17,32 @@ function ArrowIcon() {
   )
 }
 
+const links = [
+  { name: 'LinkedIn', href: site.linkedin },
+  { name: 'GitHub', href: site.github },
+  { name: site.email, href: `mailto:${site.email}` },
+]
+
 export default function Footer() {
   return (
-    <footer className="mb-16">
-      <ul className="font-sm mt-8 flex flex-col space-x-0 space-y-2 text-neutral-600 md:flex-row md:space-x-4 md:space-y-0 dark:text-neutral-300">
-        <li>
-          <a
-            className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
-            rel="noopener noreferrer"
-            target="_blank"
-            href="/rss"
-          >
-            <ArrowIcon />
-            <p className="ml-2 h-7">rss</p>
-          </a>
-        </li>
-        <li>
-          <a
-            className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
-            rel="noopener noreferrer"
-            target="_blank"
-            href="https://github.com/vercel/next.js"
-          >
-            <ArrowIcon />
-            <p className="ml-2 h-7">github</p>
-          </a>
-        </li>
-        <li>
-          <a
-            className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
-            rel="noopener noreferrer"
-            target="_blank"
-            href="https://vercel.com/templates/next.js/portfolio-starter-kit"
-          >
-            <ArrowIcon />
-            <p className="ml-2 h-7">view source</p>
-          </a>
-        </li>
+    <footer className="mt-20 mb-12 border-t border-[var(--line)] pt-8">
+      <ul className="flex flex-col gap-2 text-sm text-muted sm:flex-row sm:gap-6">
+        {links.map(({ name, href }) => (
+          <li key={name}>
+            <a
+              className="flex items-center gap-2 transition-colors hover:text-[var(--orange-text)]"
+              rel="noopener noreferrer"
+              target="_blank"
+              href={href}
+            >
+              <ArrowIcon />
+              {name}
+            </a>
+          </li>
+        ))}
       </ul>
-      <p className="mt-8 text-neutral-600 dark:text-neutral-300">
-        © {new Date().getFullYear()} MIT Licensed
+      <p className="mt-6 text-sm text-muted">
+        © {new Date().getFullYear()} {site.name}
       </p>
     </footer>
   )
