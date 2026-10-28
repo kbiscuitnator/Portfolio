@@ -7,19 +7,20 @@ import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import Footer from './components/footer'
 import { baseUrl } from './sitemap'
+import { site } from './site'
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: 'Next.js Portfolio Starter',
-    template: '%s | Next.js Portfolio Starter',
+    default: `${site.name} | ${site.tagline}`,
+    template: `%s | ${site.name}`,
   },
-  description: 'This is my portfolio.',
+  description: site.description,
   openGraph: {
-    title: 'My Portfolio',
-    description: 'This is my portfolio.',
+    title: site.name,
+    description: site.tagline,
     url: baseUrl,
-    siteName: 'My Portfolio',
+    siteName: site.name,
     locale: 'en_US',
     type: 'website',
   },
@@ -46,14 +47,10 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={cx(
-        'text-black bg-white dark:text-white dark:bg-black',
-        GeistSans.variable,
-        GeistMono.variable
-      )}
+      className={cx('bg-white', GeistSans.variable, GeistMono.variable)}
     >
-      <body className="antialiased max-w-xl mx-4 mt-8 lg:mx-auto">
-        <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0">
+      <body className="antialiased mx-auto max-w-4xl px-4 pt-2 sm:px-6">
+        <main className="flex min-w-0 flex-auto flex-col">
           <Navbar />
           {children}
           <Footer />
