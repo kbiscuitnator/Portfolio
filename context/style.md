@@ -14,14 +14,14 @@ A "bento box" grid: tiles of different sizes fitted together, each tile filled g
 ## A site I like the look of
 
 - Image: public/research-poster.jpg (the original slide deck is not linked anywhere, on purpose)
-- What it is: my own research poster for the TACC / UT Austin chronic pain project.
+- What it is: my own research poster, "Transforming Lives By Transforming Data", on converting A2CPS chronic pain study data at TACC (updated version, November 2026).
 - What I like about it: it presents my current research (predicting the likelihood of chronic pain) in a way that shows common routine behaviors and insights into human behavior.
 
 Rule: use this only as inspiration for the look. Do not copy any of its text or code.
 
 ## Look
 
-The link is a one-page academic research poster (a single wide slide). In plain words:
+The poster is a one-page academic research poster (a single wide slide). In plain words:
 
 - **Background:** plain white, clean and bright.
 - **Colors:** two accent colors only. A deep plum / wine purple for the main title, and a warm burnt orange for section labels and box outlines. Body text is black.

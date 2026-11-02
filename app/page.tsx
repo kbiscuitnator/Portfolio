@@ -3,28 +3,37 @@ import { site } from 'app/site'
 
 const researchHighlights = [
   {
-    label: 'The goal',
-    text: 'About 50 million Americans live with lifelong chronic pain. This research program at TACC works toward predicting the likelihood of chronic pain, so care and resources reach the people who need them.',
+    label: 'The study',
+    text: 'The Acute to Chronic Pain Signatures (A2CPS) project follows 2,800 thoracic and knee surgery patients over 12 months. Participants complete assessments in four groups: patient-reported outcomes, sensory testing (QST), omics and brain imaging (MRI).',
   },
   {
-    label: 'What I build',
-    text: 'A frictionless Python pipeline that cleans, analyzes and transforms data for the National Institute of Mental Health Data Archive (NDA), with more than 40 surveys programmed across multiple datasets in Python and SQL.',
+    label: 'Why it matters',
+    text: 'According to the CDC, more than 60 million Americans live with chronic pain. High-quality data from A2CPS will provide the biomarkers and biosignatures needed to predict who is susceptible or resilient to developing chronic pain.',
   },
   {
-    label: 'How I work',
-    text: 'I collaborate with research scientists as an NSF supercomputing intern, sharing reusable code through GitHub and working with software containers and data imputation.',
+    label: 'My goal',
+    text: 'Transform raw healthcare data into clean, validated data through the frictionless pipeline, so future researchers can also convert data between the HEAL and NDA repositories.',
   },
   {
-    label: 'The impact',
-    text: 'More than 40 data conversions, all accepted by the NIMH Data Archive, and recognition from my team. The work contributes to the HEAL (Helping End Addiction Long-term) initiative, and my reusable code is published in the National Common Data Elements Repository.',
+    label: 'Challenges',
+    text: 'The pipeline maps origin values to destination values, so every value must match the expected type, with no stray strings or decimals where whole numbers are expected. Missing values and empty rows also caused failures, which the team addressed with data imputation.',
   },
 ]
 
+const pipeline = [
+  { step: 'Extract', text: 'Pull one or more forms from the repository into CSV files with extract.py.' },
+  { step: 'Transform', text: 'Map origin values to the HEAL (Helping End Addiction Long-term) format using data dictionaries.' },
+  { step: 'Validate', text: 'Check every value against a YAML schema with the frictionless validate function.' },
+  { step: 'Transform', text: 'Map the data again to the NIMH Data Archive (NDA) format, guided by a JSON file.' },
+  { step: 'Validate', text: 'Confirm the NDA mappings and format with create_nda.py.' },
+  { step: 'Commit', text: 'Commit the validated files to GitHub for team review and collaboration.' },
+]
+
 const numbers = [
-  { value: '40+', caption: 'Data conversions accepted by the NIMH Data Archive' },
-  { value: '~50M', caption: 'Americans living with chronic pain, the focus of my research' },
+  { value: '40+', caption: 'Forms converted, quality-checked and shared with the NIMH Data Archive' },
+  { value: '60M+', caption: 'Americans living with chronic pain, according to the CDC' },
+  { value: '2,800', caption: 'Surgery patients in the A2CPS study' },
   { value: '3', caption: 'Internship extensions at TACC for exceptional work' },
-  { value: '25%', caption: 'More successful placements from data insights at Texas HHS' },
 ]
 
 const interests = [
@@ -189,13 +198,14 @@ export default function Page() {
           <div className="bento md:col-span-2">
             <span className="bento-label">Current research · TACC</span>
             <h3 className="title mb-3 text-2xl font-bold leading-tight tracking-tight sm:text-3xl">
-              Transforming healthcare data to help Americans living with
-              chronic pain
+              Transforming Lives By Transforming Data
             </h3>
             <p className="max-w-2xl leading-relaxed">
               Data Analyst, NSF LCCF Internship at the Texas Advanced
-              Computing Center, June 2025 to present. My internship has been
-              extended three times for exceptional work.
+              Computing Center, June 2025 to present. I convert healthcare
+              data from the Acute to Chronic Pain Signatures (A2CPS) study so
+              researchers can use it to predict chronic pain. My internship
+              has been extended three times for exceptional work.
             </p>
           </div>
 
@@ -205,6 +215,47 @@ export default function Page() {
               <p className="leading-relaxed">{text}</p>
             </div>
           ))}
+
+          <div className="bento md:col-span-2">
+            <span className="bento-label">The frictionless pipeline</span>
+            <ol className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+              {pipeline.map(({ step, text }, i) => (
+                <li
+                  key={i}
+                  className="rounded-xl border border-white/20 p-4"
+                >
+                  <strong className="mb-1 flex items-center gap-2 font-semibold">
+                    <span className="stat-value text-sm tabular-nums">
+                      {i + 1}
+                    </span>
+                    {step}
+                  </strong>
+                  <span className="block text-sm leading-relaxed text-[var(--on-green-muted)]">
+                    {text}
+                  </span>
+                </li>
+              ))}
+            </ol>
+          </div>
+
+          <div className="bento md:col-span-2">
+            <span className="bento-label">Results</span>
+            <ul className="grid gap-3 sm:grid-cols-3">
+              <li className="leading-relaxed">
+                <strong>More than 40 forms converted.</strong> The data passed
+                quality control and has been shared with the NIMH Data
+                Archive.
+              </li>
+              <li className="leading-relaxed">
+                <strong>Mappings for every form type:</strong> common forms,
+                study-specific forms and repeated forms.
+              </li>
+              <li className="leading-relaxed">
+                <strong>A path to risk scores.</strong> A2CPS biosignatures can
+                be used to develop risk scores for people with chronic pain.
+              </li>
+            </ul>
+          </div>
 
           <figure className="bento md:col-span-2">
             <span className="bento-label">Research poster</span>
@@ -216,14 +267,16 @@ export default function Page() {
             >
               <Image
                 src="/research-poster.jpg"
-                alt="Research poster: Transforming Healthcare Data through the Frictionless Pipeline Process in Python"
-                width={960}
-                height={540}
+                alt="Research poster: Transforming Lives By Transforming Data, on converting A2CPS healthcare data through the frictionless pipeline"
+                width={2160}
+                height={1215}
                 className="w-full rounded-xl bg-white"
               />
             </a>
             <figcaption className="mt-3 text-sm text-[var(--on-green-muted)]">
-              Poster for my TACC healthcare data research. Click to open it
+              My poster, Transforming Lives By Transforming Data. Mentors: Ari
+              Khan, Ph.D., and Joshua Urrutia. With thanks to my TACC team,
+              including Dr. Delores Rice and Dr. James Carson. Click to open it
               full size.
             </figcaption>
           </figure>

@@ -50,11 +50,15 @@ After earning my BA at the University of Miami, I worked with adults with disabi
 
 Data Analyst, NSF LCCF Internship, Texas Advanced Computing Center (TACC), June 2025 – present. Healthcare research program working toward predicting the likelihood of chronic pain for Americans (see the résumé for details).
 
-Proudest result: I produced more than 40 data conversions that were all accepted by the National Institute of Mental Health Data Archive (NDA), and the team recognized me for this work.
+Proudest result: I converted more than 40 forms; the data passed quality control and has been shared with the National Institute of Mental Health Data Archive (NDA), and the team recognized me for this work.
 
 Note: my TACC work repository on GitHub is private. Describe the work only in general terms; never name or link it, or show its code or data.
 
-The only research material available right now is the ACCEYSS poster (public/research-poster.jpg). Show it on the site as an image only, with no link to the Google Slides deck.
+The research material for the site is the updated poster, "Transforming Lives By Transforming Data" (public/research-poster.jpg, rendered from ~/Downloads/ACCEYSS Presentation.pdf on 2026-11-02). It covers the A2CPS study, the six-step frictionless pipeline (extract, transform to HEAL, validate, transform to NDA, validate, commit), challenges, results and acknowledgements. It replaces the original poster entirely: do not use anything from the original poster. Show the poster as an image only, with no link to the Google Slides deck.
+
+Mentors: Ari Khan, Ph.D., and Joshua Urrutia. Team thanked on the poster: Dr. Delores Rice, Dr. Ari Khan, Dr. James Carson, Joshua Urrutia.
+
+Note: the poster's Introduction says more than 60 million Americans live with chronic pain (CDC); its Results box still says 50 million. The site uses 60 million.
 
 ## Other experience
 
