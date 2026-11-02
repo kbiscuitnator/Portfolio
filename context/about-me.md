@@ -56,7 +56,9 @@ Note: my TACC work repository on GitHub is private. Describe the work only in ge
 
 The research material for the site is the updated poster, "Transforming Lives By Transforming Data" (public/research-poster.jpg, rendered from ~/Downloads/ACCEYSS Presentation.pdf on 2026-11-02). It covers the A2CPS study, the six-step frictionless pipeline (extract, transform to HEAL, validate, transform to NDA, validate, commit), challenges, results and acknowledgements. It replaces the original poster entirely: do not use anything from the original poster. Show the poster as an image only, with no link to the Google Slides deck.
 
-Mentors: Ari Khan, Ph.D., and Joshua Urrutia. Team thanked on the poster: Dr. Delores Rice, Dr. Ari Khan, Dr. James Carson, Joshua Urrutia.
+Mentors: Ari Kahn, Ph.D., and Joshua Urrutia. Team: Dr. Delores Rice and Dr. James Carson (list James Carson as a team member, not a mentor).
+
+Spelling (confirmed by me): Ari **Kahn**. The poster image spells it "Khan"; that is a typo on the poster, so never copy that spelling into text.
 
 Chronic pain figure (confirmed by me): 60 million U.S. adults are affected by chronic pain, according to the CDC. Use this exact figure everywhere (site, résumé, notes). Never use 50 million. The poster image itself is approved as is.
 

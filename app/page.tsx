@@ -275,7 +275,7 @@ export default function Page() {
             </a>
             <figcaption className="mt-3 text-sm text-[var(--on-green-muted)]">
               My poster, Transforming Lives By Transforming Data. Mentors: Ari
-              Khan, Ph.D., and Joshua Urrutia. With thanks to my TACC team,
+              Kahn, Ph.D., and Joshua Urrutia. With thanks to my TACC team,
               including Dr. Delores Rice and Dr. James Carson. Click to open it
               full size.
             </figcaption>
