@@ -58,7 +58,7 @@ The research material for the site is the updated poster, "Transforming Lives By
 
 Mentors: Ari Khan, Ph.D., and Joshua Urrutia. Team thanked on the poster: Dr. Delores Rice, Dr. Ari Khan, Dr. James Carson, Joshua Urrutia.
 
-Note: the poster's Introduction says more than 60 million Americans live with chronic pain (CDC); its Results box still says 50 million. The site uses 60 million.
+Chronic pain figure (confirmed by me): 60 million U.S. adults are affected by chronic pain, according to the CDC. Use this exact figure everywhere (site, résumé, notes). Never use 50 million. The poster image itself is approved as is.
 
 ## Other experience
 

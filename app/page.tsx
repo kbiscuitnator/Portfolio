@@ -8,7 +8,7 @@ const researchHighlights = [
   },
   {
     label: 'Why it matters',
-    text: 'According to the CDC, more than 60 million Americans live with chronic pain. High-quality data from A2CPS will provide the biomarkers and biosignatures needed to predict who is susceptible or resilient to developing chronic pain.',
+    text: 'According to the CDC, 60 million U.S. adults are affected by chronic pain. High-quality data from A2CPS will provide the biomarkers and biosignatures needed to predict who is susceptible or resilient to developing chronic pain.',
   },
   {
     label: 'My goal',
@@ -31,7 +31,7 @@ const pipeline = [
 
 const numbers = [
   { value: '40+', caption: 'Forms converted, quality-checked and shared with the NIMH Data Archive' },
-  { value: '60M+', caption: 'Americans living with chronic pain, according to the CDC' },
+  { value: '60M', caption: 'U.S. adults affected by chronic pain, according to the CDC' },
   { value: '2,800', caption: 'Surgery patients in the A2CPS study' },
   { value: '3', caption: 'Internship extensions at TACC for exceptional work' },
 ]
